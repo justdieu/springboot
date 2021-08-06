@@ -1,25 +1,33 @@
-#Learn more about Jenkins and JENKINS_HOME directory for which this file is intended.
-#  http://jenkins-ci.org/
-#  https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-#ignore all JENKINS_HOME except jobs directory, root xml config, and .gitignore file
-/*
-!/jobs
-!/.gitignore
-!/*.xml
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-#ignore all files in jobs subdirectories except for folders
-#note: git doesn't track folders, only file content
-jobs/**
-!jobs/**/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-#uncomment the following line to save next build numbers with config
-#!jobs/**/nextBuildNumber
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-#exclude only config.xml files in repository subdirectories
-!config.xml
-
-#don't track workspaces (when users build on the master)
-jobs/**/*workspace
-
-#as a result only settings and job config.xml files in JENKINS_HOME will be tracked by git
+### VS Code ###
+.vscode/
